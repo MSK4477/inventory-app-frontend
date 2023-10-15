@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../chat-client/chatapp-client"
+		},
+		{
+			"path": "../../../../inventory-app-backend"
+		}
+	]
+}

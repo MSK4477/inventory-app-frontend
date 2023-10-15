@@ -1,0 +1,16 @@
+
+
+
+
+
+@media screen and (max-width:1024px){
+    #sidebar{
+        position: fixed;
+        height: calc(100vh +  50rem) !important;
+    }
+    }
+     @media screen and (max-width:663px){
+        #sidebar{
+            height: calc(100vh +  50rem) !important;
+        }
+        } 
