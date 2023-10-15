@@ -55,9 +55,7 @@ const Getproducts = () => {
     fetch();
   }, [showProducts]);
 
-  // product?.pr?.map((item) => {
-  //   return console.log("map test", item.name);
-  // });
+ 
 
   return (
     <>

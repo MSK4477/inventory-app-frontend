@@ -33,12 +33,6 @@ const Profile = () => {
   };
   const userCreatedAtString = userCreatedAt.toLocaleString("en-US", options);
 
-  console.log(userCreatedAtString);
-
-  //   let arr = [{user}]
-  //   console.log(arr[0])
-  // const arr = [1,2,3,4,5,6,7,8,9,10]
-
   return (
     <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
       <div className="col-span-1  justify-center items-between h-auto bg-white m-2 p-9  rounded-lg flex-col flex shadow-2xl">

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { logout } from "../service/userService/authService";
 import "./sidebar.css"
 const Sidebar = () => {
-  // const navigate = useNavigate
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 const [addProduct, setAddProduct] = useState(false);
 const [toogleAddCategory, setToogleAddCategory] = useState(false)

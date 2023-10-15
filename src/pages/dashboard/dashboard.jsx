@@ -14,8 +14,7 @@ const Dashboard = () => {
     };
     fetchProduct();
   }, []);
-  console.log(productData);
-
+ 
   const arr = [];
   productData.map((item) => {
     return arr.push(item.category);
@@ -26,20 +25,16 @@ const totalProducts = productData.length
   productData.map((item) => {
     return (sum += item.price);
   });
-  console.log("sum", sum);
-
+ 
   let outOfStock = 0;
   productData.filter((item) => {
     if (item.quantity == 0) {
       return (outOfStock += 1);
     }
-    console.log("outOfStock", outOfStock);
   });
   const quantity = productData.reduce((a, b) => a + b.quantity, 0);
-  console.log("quantity", quantity);
-  const totalStoreWorth = quantity * sum;
-  console.log("totalStoreWorth", totalStoreWorth);
-  console.log();
+   const totalStoreWorth = quantity * sum;
+ 
 
   const name  = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).name : ""
 

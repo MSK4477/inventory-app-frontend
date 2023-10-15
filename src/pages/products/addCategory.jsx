@@ -13,7 +13,6 @@ const AddCategory = () => {
     // localStorage.removeItem("category")
 
     const lowercaseCategory = category.toLowerCase();
-    console.log("low", lowercaseCategory)
 
     for(let oldCategory of data){
       if(oldCategory == lowercaseCategory){
@@ -27,9 +26,7 @@ const AddCategory = () => {
       }
     
       const newData = [...data, lowercaseCategory];
-if(!newData == undefined || null){
-  console.log("hell")
-}
+
       localStorage.setItem("category", JSON.stringify(newData));
       toast.success(`Added The Category ${lowercaseCategory} To Our List Successfully`);
       setCategory("");

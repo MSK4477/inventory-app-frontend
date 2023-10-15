@@ -35,7 +35,6 @@ const EditProfile = () => {
       if (response.message) {
         toast.success("User Updated Successfully");
         navigate("/profile");
-        console.log(response.message);
       }
     } catch (err) {
       console.log(err);

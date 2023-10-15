@@ -29,7 +29,6 @@ useEffect (() =>  {
     setLoading(true)
 }, [])
 
-console.log(user)
 return [user, loading]
 
 
