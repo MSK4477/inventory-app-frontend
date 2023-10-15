@@ -123,7 +123,7 @@ const dropSettings = () => {
 </div>
 
 {isSettings && <div className=" w-full hover:bg-gray-900 py-2  cursor-pointer flex items-center justify-center ">
-            <h3 className=" hover:text-blue-700 font-sans text-white"  onClick={loggedOut}><i className="fa-solid  fa-right-from-bracket" ></i> {""} Logout</h3>
+            <h3 className=" hover:text-sky-700 font-sans text-white"  onClick={loggedOut}><i className="fa-solid  fa-right-from-bracket" ></i> {""} Logout</h3>
           </div> }
       
     </div>

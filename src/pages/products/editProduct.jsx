@@ -71,6 +71,7 @@ const EditProduct = () => {
             onChange={handleChange}
             className=" p-2 border w-3/4 border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
+          <br />
           <textarea
             type="text"
             required={true}
@@ -79,6 +80,8 @@ const EditProduct = () => {
             onChange={handleChange}
             className=" p-2 border w-3/4 border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
+                    <br />
+
           <input
             type="text"
             required={true}
@@ -96,14 +99,16 @@ const EditProduct = () => {
             size="1"
             onChange={handleChange}
             value={product.category}
-            className="w-3/4 border p-1  bg-white  rounded"
+            className="w-3/4 border p-2  bg-white  rounded"
           >
             {category.map((item) => (
-              <option className="text-black" key={item} value={item.name}>
+              <option key={item} value={item.name}>
                 {item}
               </option>
             ))}
           </select>
+          <br />
+
           <input
             type="text"
             placeholder="Image"
@@ -113,6 +118,8 @@ const EditProduct = () => {
             onChange={handleChange}
             className=" p-2 border w-3/4 border-gray-300 rounded focus:outline-none focus:border-blue-500"
           />
+                    <br />
+
           <input
             type="text"
             placeholder="Quantity"

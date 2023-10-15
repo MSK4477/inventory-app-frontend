@@ -4,7 +4,7 @@ import axios from "axios"
 //Create a new product
 export const createProducts =  async(productData) => { 
 
-    const response = await axios.post(`http://localhost:3000/product`,productData, {
+    const response = await axios.post(`https://inventory-billing-backend-l6kc.onrender.com/product`,productData, {
         withCredentials:true,
     })
     return response.data
@@ -13,7 +13,7 @@ export const createProducts =  async(productData) => {
 //Get all products
 export const GetProducts =  async() => { 
 
-    const response = await axios.get(`http://localhost:3000/product`, {
+    const response = await axios.get(`https://inventory-billing-backend-l6kc.onrender.com/product`, {
         withCredentials:true,
     })
     return response.data
@@ -23,7 +23,7 @@ export const GetProducts =  async() => {
 //Get a product
 export const getProduct =  async(id) => { 
 
-    const response = await axios.get(`http://localhost:3000/product/${id}`, {
+    const response = await axios.get(`https://inventory-billing-backend-l6kc.onrender.com/product/${id}`, {
         withCredentials:true,
     })
     return response.data
@@ -33,7 +33,7 @@ export const getProduct =  async(id) => {
 //update a product
 export const updateProduct =  async(id,productData) => { 
 
-    const response = await axios.post(`http://localhost:3000/product/update/${id}`,productData, {
+    const response = await axios.post(`https://inventory-billing-backend-l6kc.onrender.com/product/update/${id}`,productData, {
         withCredentials:true,
     })
     return response.data
@@ -44,7 +44,7 @@ export const updateProduct =  async(id,productData) => {
 //delete a product
 export const deleteProduct =  async(id) => { 
 
-    const response = await axios.get(`http://localhost:3000/product/delete/${id}`, {
+    const response = await axios.get(`https://inventory-billing-backend-l6kc.onrender.com/product/delete/${id}`, {
         withCredentials:true,
     })
     return response.data

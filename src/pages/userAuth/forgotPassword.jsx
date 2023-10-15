@@ -51,7 +51,7 @@ const {name, value} = e.target
         />
         <br />
         <br />
-        <button type="submit" className="w-full bg-blue-500 py-3 rounded-lg text-white hover:bg-blue-700">Reset Password</button>
+        <button type="submit" className="w-full bg-blue-500 py-3 rounded-lg text-white hover:bg-sky-700">Reset Password</button>
       </form>
       </div>
       <div className="  flex items-center justify-center h-screen shadow-2xl rounded-xl ">
@@ -63,7 +63,7 @@ const {name, value} = e.target
 
      )
     : ( <div className="w-full h-screen flex justify-center items-center ">
-    <div className='font-bold text-5xl font-serif  text-black'>Email has sent check your mail</div>
+    <div className='w-auto py-12 px-10 font-serif rounded-lg shadow-lg font-bold text-3xl'>Email has sent check your mail</div>
     </div>)}
 
     

@@ -71,7 +71,7 @@ const Getproducts = () => {
               <div className="relative">
               <i
                 onClick={() => toogleOptions(product.productID)}
-                className="fa-solid  absolute right-0 top-0 cursor-pointer fa-ellipsis-vertical"
+                className="fa-solid p-2 absolute right-0 top-0 cursor-pointer fa-ellipsis-vertical"
                 style={{ color: "#000000" }}
               ></i>
               </div>
