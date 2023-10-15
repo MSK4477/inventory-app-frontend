@@ -7,6 +7,7 @@ const EditProfile = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  // const initialState = 
   const [user, setUser] = useState([]);
 
   useEffect(() => {
@@ -21,7 +22,6 @@ const EditProfile = () => {
     fetchUser();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(user._id);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +50,6 @@ const EditProfile = () => {
         >
           <h1 className="text-2xl absolute top-3 font-bold">Update User</h1>
 
-
           <input
             type="text"
             name="name"
@@ -61,7 +60,8 @@ const EditProfile = () => {
             className=" p-4 border rounded-lg w-3/4 border-gray-300  focus:outline-none focus:border-blue-500"
           />
 
-<br /><br />
+          <br />
+          <br />
           <input
             type="text"
             required={true}
@@ -71,10 +71,10 @@ const EditProfile = () => {
             onChange={handleChange}
             className=" p-4 border rounded-lg w-3/4 border-gray-300  focus:outline-none focus:border-blue-500"
           />
-<br /><br />
+          <br />
+          <br />
           <input
             type="text"
-
             required={true}
             placeholder="image"
             name="category"
@@ -82,7 +82,8 @@ const EditProfile = () => {
             onChange={handleChange}
             className=" p-4 border w-3/4 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
           />
-          <br /><br />
+          <br />
+          <br />
 
           <br />
           <button
@@ -94,8 +95,8 @@ const EditProfile = () => {
         </form>
 
         <div className="  justify-center items-center h-fit bg-white m-2 p-8 rounded-lg flex-col flex shadow-2xl">
-        <img src={inv6} alt="" />
-      </div>
+          <img src={inv6} alt="" />
+        </div>
       </div>
     </>
   );
