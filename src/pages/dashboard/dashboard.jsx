@@ -1,5 +1,7 @@
 import { GetProducts } from "../../service/productService/productsService";
 import { useEffect, useState } from "react";
+import BarChart  from "../../chart/barChart"
+import DoughnutChart from "../../chart/Doughnut";
 const Dashboard = () => {
   const [productData, setProductData] = useState([]);
 
@@ -14,24 +16,29 @@ const Dashboard = () => {
     };
     fetchProduct();
   }, []);
- 
+ //category
   const arr = [];
   productData.map((item) => {
     return arr.push(item.category);
   });
   let newArr = [...new Set(arr)];
+
+  //total products
   let sum = 0;
 const totalProducts = productData.length
   productData.map((item) => {
     return (sum += item.price);
   });
  
+  //out of stock
   let outOfStock = 0;
   productData.filter((item) => {
     if (item.quantity == 0) {
       return (outOfStock += 1);
     }
   });
+
+  //total quantity
   const quantity = productData.reduce((a, b) => a + b.quantity, 0);
    const totalStoreWorth = quantity * sum;
  
@@ -62,6 +69,17 @@ const totalProducts = productData.length
         </div>
         
       </div>
+      <div className="ml-6 grid gap-11 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+<div className=" mt-12 bg-gray-100 p-14 rounded-2xl col-span-1 shadow-2xl" style={{width:"99%", height:"70vh"}}>        
+<BarChart />
+</div>
+<div  className=" bg-gray-100 p-14 rounded-2xl shadow-2xl" style={{width:"80%"}}>
+<DoughnutChart />
+</div>
+        
+
+      </div>
+
     </div>
   );
 };
