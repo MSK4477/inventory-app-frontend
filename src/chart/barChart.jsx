@@ -18,7 +18,7 @@ export const options = {
   },
 };
 
-const labels = ["Total Category", "Total Products", "Total Quantity"];
+const labels = ["Total Category", "Total Quantity" ,"Total Products"];
 
 export default function BarChart() {
   const [productData, setProductData] = useState([]);
