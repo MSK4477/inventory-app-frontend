@@ -30,10 +30,11 @@ const [load, setLoad] = useState(true)
         setLoad(false)
 
       }
-   
+      console.log("hi")
+
       console.log(response);
     } catch (err) {
-      toast.error(err.response.data.error);
+      toast.error(err.response.data);
       console.log(err.response.data.error)
     }
   };
