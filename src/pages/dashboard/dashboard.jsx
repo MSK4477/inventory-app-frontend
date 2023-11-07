@@ -48,7 +48,7 @@ const totalProducts = productData.length
   return (
     <div className="p-[5vmax] max-md:w-full max-md:left-0 w-[calc(100%-16%)] absolute left-48 top-0 ">
             <div className="border-b-4 flex justify-center items-center w-full border-gray-300 ml-9 h-24">
-        <div className=" mb-4 text-3xl font-serif font-bold text-shadow-2 text-black ">{name}{"'s"}<span className="text-orange-400 font-serif">&nbsp; Inventory</span></div></div>
+        <div className=" mb-4 text-3xl font-serif  text-shadow-2 max-md:text-2xl text-black ">{name}{"'s"}<span className="text-orange-400 font-serif">&nbsp; Inventory</span></div></div>
       <div className=" grid gap-3 mt-7  ml-9 gap-y-5 grid-cols-1 sm:grid-cols-1 grid-flow-row-dense  md:grid-cols-2 lg:grid-cols-3">
 
          <div className=" h-32 flex  justify-center items-center w-full bg-gray-100  rounded-xl shadow-lg mb-4">

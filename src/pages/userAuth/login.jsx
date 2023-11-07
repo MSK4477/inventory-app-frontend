@@ -41,7 +41,7 @@ const navigate = useNavigate();
 
   return (
     <>
-    <div className="w-full    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
+    <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
       <div className="mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
         <form
           className="bg-slate-100 max-md:w-[90%] p-10 rounded-lg shadow-xl"

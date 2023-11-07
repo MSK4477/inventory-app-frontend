@@ -34,7 +34,7 @@ const {name, value} = e.target
     <>
 
       { load ? (
-    <div className="w-full    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
+    <div className="w-full p-[5vmax]    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
         <>
         <div className="  flex items-center justify-center h-screen shadow-2xl rounded-xl ">
