@@ -44,11 +44,11 @@ const [load, setLoad] = useState(true)
 
     {load ?(
       <>
-        <div className="w-full  gap-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div className="w-full    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
     <div className="  mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
 
-    <form className="bg-slate-100  p-10 rounded-lg shadow-xl" onSubmit={handleSubmit}>
+    <form className="bg-slate-100 max-md:w-[90%] p-10 rounded-lg shadow-xl" onSubmit={handleSubmit}>
     <h1 className='className="font-bold text-3xl font-serif text-center "'>Sign up</h1>
     <br />
         <Input
@@ -96,7 +96,7 @@ const [load, setLoad] = useState(true)
       <Button type="submit" text="Register" />
     </form>
     </div>
-    <div className=" bg-white  rounded-lg shadow-2xl">
+    <div className=" bg-white max-xl:hidden  rounded-lg shadow-2xl">
 <img src={inv9}  alt="" />
 </div>
     </div>

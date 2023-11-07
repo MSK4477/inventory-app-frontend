@@ -34,7 +34,7 @@ const Profile = () => {
   const userCreatedAtString = userCreatedAt.toLocaleString("en-US", options);
 
   return (
-    <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+    <div className=" w-[calc(100%-16%)] absolute left-48 top-0   h-screen p-[5vmax] max-md:w-full max-md:left-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
       <div className="col-span-1  justify-center items-between h-auto bg-white m-2 p-9  rounded-lg flex-col flex shadow-2xl">
         <h1 className="text-xl text-yellow-900 flex justify-between items-between font-bold">
           User Profile

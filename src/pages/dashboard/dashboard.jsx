@@ -46,7 +46,7 @@ const totalProducts = productData.length
   const name  = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).name : ""
 
   return (
-    <div className=" w-[calc(100%-16%)] absolute left-48 top-0 ">
+    <div className="p-[5vmax] max-md:w-full max-md:left-0 w-[calc(100%-16%)] absolute left-48 top-0 ">
             <div className="border-b-4 flex justify-center items-center w-full border-gray-300 ml-9 h-24">
         <div className=" mb-4 text-3xl font-serif font-bold text-shadow-2 text-black ">{name}{"'s"}<span className="text-orange-400 font-serif">&nbsp; Inventory</span></div></div>
       <div className=" grid gap-3 mt-7  ml-9 gap-y-5 grid-cols-1 sm:grid-cols-1 grid-flow-row-dense  md:grid-cols-2 lg:grid-cols-3">

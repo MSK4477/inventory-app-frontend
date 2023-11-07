@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/userAuth/forgotPassword";
 import ResetPassword from "./pages/userAuth/resetPassword";
 import Verify from "./pages/userAuth/verify";
 import Sidebar from "./pages/sideBar";
+import Side from "./pages/side.jsx";
 import AddProduct from "./pages/products/addProduct";
 import AddCategory from "./pages/products/addCategory";
 import Getproducts from "./pages/products/getProducts";
@@ -36,6 +37,7 @@ const App = () => {
                 element={
                   <>
                     <Sidebar />
+                    <Side />
                     <EditProfile />{" "}
                   </>
                 }
@@ -49,7 +51,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar /> <Profile />
+                    <Sidebar /> <Side /> <Profile />
                   </>
                 }
               />
@@ -61,7 +63,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar /> <EditProduct />
+                    <Sidebar /> <Side /> <EditProduct />
                   </>
                 }
               />
@@ -73,7 +75,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar /> <Getproducts />{" "}
+                    <Sidebar /> <Side /> <Getproducts />{" "}
                   </>
                 }
               />
@@ -85,7 +87,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar /> <AddCategory />{" "}
+                    <Sidebar /> <Side /> <AddCategory />{" "}
                   </>
                 }
               />
@@ -97,7 +99,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar />
+                    <Sidebar /> <Side />
                     <AddProduct />{" "}
                   </>
                 }
@@ -110,7 +112,7 @@ const App = () => {
               <ProtectedPage
                 element={
                   <>
-                    <Sidebar />
+                    <Sidebar /> <Side />
                     <Dashboard />{" "}
                   </>
                 }

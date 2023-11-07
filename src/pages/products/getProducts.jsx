@@ -60,7 +60,7 @@ const Getproducts = () => {
   return (
     <>
       {showProducts ? (
-        <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-4  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
+        <div className="  max-md:w-full max-md:left-0 w-[calc(100%-16%)] absolute left-48 top-0 p-[7vmax]  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
           {product?.pr?.map((product) => (
             <div
               className="col-span-1 relative h-auto bg-white m-2 mb-5 p-8 rounded-lg shadow-2xl"
@@ -121,7 +121,7 @@ const Getproducts = () => {
           ))}
         </div>
       ) : (
-        <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
+        <div className="  max-md:w-full max-md:left-0  w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
           <div className="col-span-1  justify-center items-center h-fit bg-white m-2 p-8 rounded-lg flex-col flex shadow-2xl">
             <h1 className="text-xl font-bold">
               Your Inventory is Empty Please <Link className="text-blue-700"  to={"/add-product"}>Add</Link> Products To View

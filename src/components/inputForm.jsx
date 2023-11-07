@@ -10,7 +10,7 @@ const Input = ({ type, name, required, value, placeholder, onChange, min }) => {
       onChange={onChange}
       minLength={min}
       required={required}
-      className="block w-96  border-collapse px-4 py-4 mt-2 text-blue-950 border rounded-lg focus:outline-none focus:border-blue-500"
+      className="block w-full  border-collapse px-4 py-3 mt-2 text-blue-950 border rounded-lg focus:outline-none focus:border-blue-500"
     />
   );
 };

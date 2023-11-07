@@ -34,12 +34,12 @@ const {name, value} = e.target
     <>
 
       { load ? (
-    <div className="w-full  gap-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <div className="w-full    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
         <>
         <div className="  flex items-center justify-center h-screen shadow-2xl rounded-xl ">
-      <form className="relative bg-slate-50 px-24 py-24 rounded-lg shadow-xl" onSubmit={handleSubmit}>
-        <h1 className='font-bold text-3xl py-8 absolute top-2 font-serif text-center'>Forgot Password?</h1>
+      <form className="relative bg-slate-100 max-md:w-[90%] w-[76%]  p-10 pt-28 rounded-lg shadow-xl" onSubmit={handleSubmit}>
+        <h1 className=' py-8 absolute top-2 text-3xl font-serif text-center'>Forgot Password?</h1>
         <input
           type="email"
           name="email"
@@ -54,7 +54,7 @@ const {name, value} = e.target
         <button type="submit" className="w-full bg-blue-500 py-3 rounded-lg text-white hover:bg-sky-700">Reset Password</button>
       </form>
       </div>
-      <div className="  flex items-center justify-center h-screen shadow-2xl rounded-xl ">
+      <div className="flex max-xl:hidden items-center justify-center bg-white rounded-lg shadow-2xl">
       <img src={inv10} alt="forgot password" />
     </div>
       </>

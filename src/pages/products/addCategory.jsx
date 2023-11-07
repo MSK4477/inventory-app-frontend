@@ -33,7 +33,7 @@ const AddCategory = () => {
     
   };
   return (
-    <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 ">
+    <div className="p-[7vmax] max-md:w-full max-md:left-0 w-[calc(100%-16%)] absolute left-48 top-0   h-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 ">
 
       {" "}
       <div className="bg-white col-span-1  rounded-lg shadow-2xl flex flex-col p-10">

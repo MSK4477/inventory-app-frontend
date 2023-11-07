@@ -50,13 +50,13 @@ return;
   };
 
   return (
-    <div className="w-full  gap-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <div className="w-full    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
-    <div className="flex justify-center w-full   items-center h-screen">
+<div className="  mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
 
-      <form className="bg-slate-50  py-10 px-12 rounded-lg shadow-lg" onSubmit={handleSubmit}>
+<form className="bg-slate-100 max-md:w-[90%] p-10 rounded-lg shadow-xl" onSubmit={handleSubmit}>
 
-      <h1 className="text-center font-bold text-2xl">Reset Password</h1>
+      <h1 className="text-3xl font-serif text-center">Reset Password</h1>
 <br /><br />
         {/* <Label htmlFor="old-password" text="Old Password" /> */}
         <Input
@@ -96,7 +96,7 @@ return;
         <Button type="submit" text="Set Password" />
       </form>
     </div>
-    <div className=" bg-white  rounded-lg shadow-2xl">
+    <div className=" bg-white max-xl:hidden  rounded-lg shadow-2xl">
 <img src={inv11}  alt="" />
 </div>
     </div>

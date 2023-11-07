@@ -45,7 +45,7 @@ const dropSettings = () => {
 
   return (
     <>
-    <div className="flex  flex-col w-48 top-0 left-0 h-[calc(100vh+100px)] bg-gray-800" id="sidebar">
+    <div className="flex max-md:hidden flex-col w-48 top-0 left-0 h-[calc(100vh+100px)] bg-gray-800" id="sidebar">
 
 <div className=" pt-12 pb-4 text-white flex justify-center text-sm items-center">
 <i className="fa-solid fa-bounce fa-warehouse"></i> &nbsp;

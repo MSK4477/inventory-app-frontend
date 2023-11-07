@@ -54,11 +54,9 @@ const AddProduct = () => {
 
   return (
     <>
-      <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-full   grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 ">
-        <div className=" h-screen bg-white m-2 p-8 rounded-lg shadow-2xl">
-          <img src={inv1} alt="add" />
-        </div>
-        <div className=" bg-white m-2 p-8 rounded-lg shadow-2xl">
+      <div className=" p-[7vmax] max-md:w-full max-md:left-0 w-[calc(100%-16%)] absolute left-48 top-0   h-full   grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 ">
+       
+        <div className=" bg-white  p-8 rounded-lg shadow-2xl">
           <h2 className="text-2xl font-bold mb-4 text-center">Add Product</h2>
           <form onSubmit={handleSubmit} className="text-center">
             <input
@@ -161,6 +159,9 @@ const AddProduct = () => {
               + Add
             </button>
           </form>
+        </div>
+        <div className=" h-screen bg-white m-2 p-8 rounded-lg shadow-2xl">
+          <img src={inv1} alt="add" />
         </div>
       </div>
     </>
