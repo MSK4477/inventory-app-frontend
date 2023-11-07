@@ -48,7 +48,7 @@ const Profile = () => {
             <br />
             {toogle && (
               <h1 className="bg-white absolute top-4 right-5  cursor-pointer border p-3 rounded-lg shadow-2xl">
-                <Link className="text-black text-lg hover:text-blue-700" to={`/edit-profile/${user._id}`}>Edit</Link>
+                <Link className="text-black text-sm hover:text-blue-700" to={`/edit-profile/${user._id}`}>Edit</Link>
               </h1>
             )}
           </div>{" "}
