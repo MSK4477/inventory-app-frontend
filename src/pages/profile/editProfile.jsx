@@ -43,7 +43,7 @@ const EditProfile = () => {
 
   return (
     <>
-      <div className=" w-[calc(100%-16%)] absolute left-48 top-0 p-9  h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  ">
+    <div className=" w-[calc(100%-16%)] absolute left-48 top-0   h-screen p-[4vmax] max-md:w-full max-md:left-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
         <form
           className="col-span-1 relative  justify-center items-center h-auto bg-white m-2 p-8 rounded-lg flex-col flex shadow-2xl"
           onSubmit={handleSubmit}
