@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { forgotpassword } from "../../service/userService/authService";
 import { toast } from "react-toastify";
+import Input from "../../components/inputForm";
 import inv10 from "../svg/inv10.jpg"
 const ForgotPassword = () => {
   const [email, setEmail] = useState({email:""});
@@ -34,13 +35,17 @@ const {name, value} = e.target
     <>
 
       { load ? (
-    <div className="w-full p-[5vmax]    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
+    <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
         <>
-        <div className="  flex items-center justify-center h-screen shadow-2xl rounded-xl ">
-      <form className="relative bg-slate-100 max-md:w-[90%] w-[76%]  p-10 pt-28 rounded-lg shadow-xl" onSubmit={handleSubmit}>
-        <h1 className=' py-8 absolute top-2 text-3xl font-serif text-center'>Forgot Password?</h1>
-        <input
+        <div className="mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
+        <form
+          className="bg-slate-100  max-md:w-[90%] w-[80%] p-12 rounded-lg shadow-xl"
+          onSubmit={handleSubmit} 
+        >        
+    <h1 className='className="font-bold  text-3xl font-serif text-center'>Forgot Password</h1>
+        <br />
+        <Input
           type="email"
           name="email"
           required={true}
