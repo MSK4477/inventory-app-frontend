@@ -13,10 +13,9 @@ const ResetPassword = () => {
   const token = queryParam.get("token");
 
   const [formData, setFormData] = useState({
-    oldPassword: "",
     newPassword: "",
     confirmNewPassword: "",
-    email:"",
+   
   });
 
   const handleChange = (e) => {
@@ -26,10 +25,10 @@ const ResetPassword = () => {
       [name]: value,
     });
   };
-const {oldPassword, newPassword} = formData
+const { newPassword, confirmNewPassword} = formData
   const handleSubmit = async(e) => {
     e.preventDefault();
-if(newPassword.length && oldPassword.length < 8){
+if(newPassword.length && confirmNewPassword.length < 8){
 toast.error("Password must be 8 characters long")
 return;
 }
@@ -58,16 +57,7 @@ return;
 
       <h1 className="text-3xl font-serif text-center">Reset Password</h1>
 <br /><br />
-        {/* <Label htmlFor="old-password" text="Old Password" /> */}
-        <Input
-          type="password"
-          name="oldPassword"
-          value={formData.oldPassword}
-          placeholder="Old Password"
-          onChange={handleChange}
-          min={8}
-          required={true}
-        />
+       
         <br />
         {/* <Label htmlFor="password" text="New Password" /> */}
         <Input
