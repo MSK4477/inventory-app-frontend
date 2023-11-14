@@ -30,8 +30,8 @@ const {name, value} = e.target
         setLoad(false)
       }
     } catch (err) {
-      toast.error(err.error);
-      console.log(err)
+      toast.error(err.response.data.error);
+      console.log(err.response.data.error)
     } finally { 
       setLoader(false)
     }
