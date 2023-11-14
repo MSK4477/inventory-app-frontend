@@ -37,7 +37,7 @@ const [load, setLoad] = useState(true)
 
       console.log(response);
     } catch (err) {
-      toast.error(err.response.data);
+      toast.error(err.response.data.error);
       console.log(err.response.data.error)
     } finally { 
       setLoader(false)
