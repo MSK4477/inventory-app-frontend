@@ -1,4 +1,3 @@
-// Login.js
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -7,6 +6,7 @@ import Input from "../../components/inputForm";
 import Button from "../../components/button";
 import { login } from "../../service/userService/authService.js";
 import inv8 from "../svg/inv8.jpg"
+import Loader from "../loader.jsx";
 const Login = () => {
   const [formData, setFormData] = useState({email:"",password:""});
 const navigate = useNavigate();
@@ -15,9 +15,12 @@ const navigate = useNavigate();
   setFormData({ ...formData, [name]: value });
 
   };
+  const [loader, setLoader] = useState(false)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true)
     try {
       const response = await login(formData)
        
@@ -36,12 +39,15 @@ const navigate = useNavigate();
       console.log(error);
         toast.error(error.response.data.error);
       
+    } finally { 
+      setLoader(false)
     }
   };
 
   return (
     <>
-    <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
+    {loader && <div className="flex justify-center items-center w-full h-screen bg-white"><Loader /> </div> } 
+    {!loader && <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
       <div className="mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
         <form
           className="bg-slate-100 max-md:w-[90%] p-10 rounded-lg shadow-xl"
@@ -92,7 +98,7 @@ const navigate = useNavigate();
     <img className="" src={inv8} alt="" />
         </div>
 
-      </div>
+      </div>}
     </>
   );
 };

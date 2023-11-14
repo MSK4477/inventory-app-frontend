@@ -49,7 +49,7 @@ const EditProfile = () => {
           onSubmit={handleSubmit}
         >
           <h1 className="text-2xl absolute top-3 font-bold">Update User</h1>
-
+<br />
           <input
             type="text"
             name="name"

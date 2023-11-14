@@ -5,6 +5,7 @@ import Input from "../../components/inputForm";
 import Button from "../../components/button";
 import { Link } from "react-router-dom";
 import inv9 from "../svg/inv9.jpg"
+import Loader from "../loader.jsx";
 const initialState = {
   name: "",
   email: "",
@@ -19,9 +20,11 @@ const [load, setLoad] = useState(true)
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const [loader, setLoader] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true)
     try {
       const response = await register(formData);
       if(response.message){
@@ -36,13 +39,16 @@ const [load, setLoad] = useState(true)
     } catch (err) {
       toast.error(err.response.data);
       console.log(err.response.data.error)
+    } finally { 
+      setLoader(false)
     }
   };
 
   return (
     <>
-
-    {load ?(
+{loader &&  <div className="flex justify-center items-center w-full h-screen bg-white"><Loader /> </div> 
+}
+    {!loader && load && (
       <>
         <div className="w-full p-[5vmax]    gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
@@ -101,7 +107,7 @@ const [load, setLoad] = useState(true)
 </div>
     </div>
     </>
-    ) :(
+    )} {!load &&(
 
 <div className="flex justify-center items-center w-full h-screen">
     <div className='font-bold text-3xl font-serif  text-black'>Email has sent check your mail</div>
