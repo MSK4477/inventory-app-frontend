@@ -6,9 +6,11 @@ import Input from "../../components/inputForm";
 import Button from "../../components/button";
 // import Label from "../../components/label";
 import inv11 from "../svg/inv11.png"
+import Loader from "../loader.jsx";
 const ResetPassword = () => {
   const navigate = useNavigate();
   const [queryParam] = useSearchParams();
+  const [loader, setLoader] = useState(false)
 
   const token = queryParam.get("token");
 
@@ -27,6 +29,7 @@ const ResetPassword = () => {
   };
 const { newPassword, confirmNewPassword} = formData
   const handleSubmit = async(e) => {
+    setLoader(true)
     e.preventDefault();
 if(newPassword.length && confirmNewPassword.length < 8){
 toast.error("Password must be 8 characters long")
@@ -45,11 +48,14 @@ return;
     } catch (err) {
         console.log(err.response.data.error)
       toast.error(err.response.data.error);
+    } finally { 
+      setLoader(false)
     }
   };
 
   return (
-    <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
+    <>
+   {!loader  ? <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
 <div className="  mt-7 rounded-lg shadow-2xl flex items-center justify-center h-screen">
 
@@ -89,7 +95,8 @@ return;
     <div className=" bg-white max-xl:hidden  rounded-lg shadow-2xl">
 <img src={inv11}  alt="" />
 </div>
-    </div>
+    </div> : <div className="flex justify-center items-center w-full h-screen bg-white"><Loader /> </div>}
+    </>
   );
 };
 export default ResetPassword;

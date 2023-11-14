@@ -3,9 +3,11 @@ import { forgotpassword } from "../../service/userService/authService";
 import { toast } from "react-toastify";
 import Input from "../../components/inputForm";
 import inv10 from "../svg/inv10.jpg"
+import Loader from "../loader.jsx";
 const ForgotPassword = () => {
   const [email, setEmail] = useState({email:""});
   const [load, setLoad] = useState(true)
+  const [loader, setLoader] = useState(false)
 
   const handleChange = (e) => {
 const {name, value} = e.target
@@ -17,6 +19,7 @@ const {name, value} = e.target
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true)
     try {
       const response = await forgotpassword(
         email 
@@ -28,13 +31,16 @@ const {name, value} = e.target
       }
     } catch (err) {
       toast.error(err);
+    } finally { 
+      setLoader(false)
     }
   };
 
   return (
     <>
+{loader &&  <div className="flex justify-center items-center w-full h-screen bg-white"><Loader /> </div> }
 
-      { load ? (
+      {!loader && load && 
     <div className="w-full p-[5vmax]   gap-6 grid grid-cols-1 max-xl:grid-cols-1 xl:grid-cols-2">
 
         <>
@@ -66,8 +72,8 @@ const {name, value} = e.target
      
      </div>
 
-     )
-    : ( <div className="w-full h-screen flex justify-center items-center ">
+     }
+    {!load && ( <div className="w-full h-screen flex justify-center items-center ">
     <div className='w-auto py-12 px-10 font-serif rounded-lg shadow-lg font-bold text-3xl'>Email has sent check your mail</div>
     </div>)}
 
